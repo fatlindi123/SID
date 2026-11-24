@@ -1,0 +1,14 @@
+{
+  "title": "SID",
+  "description": "Helps software teams explore unfamiliar applications, map pages and workflows, and generate automated tests without relying on documentation.",
+  "icons": {
+    "icon": "/favicon.svg"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
