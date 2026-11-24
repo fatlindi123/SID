@@ -8,7 +8,7 @@ import { loadEnv } from 'vite'
 
 const configDirectory = process.cwd()
 const siteConfiguration = JSON.parse(
-  fs.readFileSync(path.resolve(configDirectory, 'depencies/make/site.json'), 'utf8'),
+  fs.readFileSync(path.resolve(configDirectory, 'make/site.json'), 'utf8'),
 ) as FigmaSiteConfiguration
 
 // Vite config — https://vitejs.dev/config/
@@ -44,7 +44,7 @@ export default defineConfig(({ command, mode }) => {
       throw new Error('VITE_API_BASE_URL must point to an explicit HTTPS API host for production builds.')
     }
   }
-  // depencies/make/deploy-preview passes `--mode development` for cached-preview builds.
+  // make/deploy-preview passes `--mode development` for cached-preview builds.
   const emitSourcemaps = mode === 'development'
 
   return {
@@ -73,7 +73,7 @@ react(),
       strictPort: true,
       watch: {
         ignored: [
-          '**/depencies/**',
+          '**/make/**',
 ],
       },
     },
@@ -111,7 +111,7 @@ type FigmaSiteConfiguration = {
   }
 }
 
-/** Applies /depencies/make/site.json to the generated document shell. */
+/** Applies /make/site.json to the generated document shell. */
 function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
   function sanitizeHtmlValue(value: string | undefined): string {
     return value?.replace(/[^a-zA-Z0-9_-]/g, '') || ''

@@ -11,7 +11,7 @@ SID helps teams explore web applications, save evidence about their pages and in
 - `backend/app/services/` — browser exploration, safe egress, background workers, analysis, graph, workflow, project, test execution, and report services.
 - `backend/alembic/versions/` — additive database migrations; current head is `0014_remove_google_identity`.
 - `backend/tests/` — API, service, migration, and controlled local Chromium tests.
-- `depencies/` — Figma Make and Code Layers configuration. The React source remains in `src/`.
+- `make/` — Figma Make scripts and site configuration. The React source remains in `src/`.
 
 ## Requirements
 
